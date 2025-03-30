@@ -2,7 +2,7 @@
   "name": "javascript-calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://crator-kev.github.io/random-quote-machine",
+  "homepage": "https://creator-kev.github.io/random-quote-machine",
 
   "dependencies": {
     "react": "^18.2.0",
