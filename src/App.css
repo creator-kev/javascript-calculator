@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+  width: 320px;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.formula {
+  min-height: 20px;
+  text-align: right;
+  margin-bottom: 5px;
+  color: #ff9500;
+  font-size: 14px;
+  padding: 5px;
+  overflow-wrap: break-word;
+}
+
+#display {
+  background-color: #444;
   color: white;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  height: 60px;
+  background-color: #555;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+button:active {
+  background-color: #aaa;
+}
+
+#clear {
+  background-color: #9c0000;
+  grid-column: span 2;
+}
+
+#clear:hover {
+  background-color: #c00;
+}
+
+#equals {
+  background-color: #007acc;
+  grid-column: span 2;
+}
+
+#equals:hover {
+  background-color: #0095ff;
+}
+
+#add, #subtract, #multiply, #divide {
+  background-color: #ff9500;
+}
+
+#add:hover, #subtract:hover, #multiply:hover, #divide:hover {
+  background-color: #ffae40;
+}
+
+#zero {
+  grid-column: span 2;
 }
